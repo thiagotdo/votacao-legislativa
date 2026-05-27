@@ -61,8 +61,8 @@ function BrasaoUploader({ value, onChange }) {
   function handleFile(file) {
     setError("");
     if (!file) return;
-    if (!/^image\//.test(file.type)) {
-      setError("Selecione um arquivo de imagem (PNG, JPG, SVG ou WebP).");
+    if (!["image/png", "image/jpeg", "image/svg+xml"].includes(file.type)) {
+      setError("Formato inválido. Use PNG, JPG ou SVG.");
       return;
     }
     if (file.size > 1024 * 1024) {
@@ -95,7 +95,9 @@ function BrasaoUploader({ value, onChange }) {
             )}
           </div>
           <div className="small muted">
-            Formatos aceitos: PNG, JPG, SVG ou WebP (até 1 MB). Para melhor resultado, envie uma imagem quadrada com fundo transparente.
+            Formatos aceitos: PNG, JPG ou SVG.<br/>
+            Recomendado: 200×200 px ou maior.<br/>
+            Fundo transparente (PNG) fica melhor.
           </div>
           {error && <div className="small" style={{ color: "var(--nao-text)" }}>{error}</div>}
         </div>
@@ -103,7 +105,7 @@ function BrasaoUploader({ value, onChange }) {
       <input
         ref={inputRef}
         type="file"
-        accept="image/png,image/jpeg,image/svg+xml,image/webp"
+        accept="image/png,image/jpeg,image/svg+xml"
         style={{ display: "none" }}
         onChange={(e) => handleFile(e.target.files?.[0])}
       />
