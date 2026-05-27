@@ -91,11 +91,11 @@ function ThemeToggle() {
 
 function TopBar({ view, setView, config }) {
   const tabs = [
-    { id: "mesa",     label: "Mesa Diretora" },
-    { id: "vereador", label: "Painel do Vereador" },
-    { id: "telao",    label: "Telão Plenário" },
-    { id: "arquivo",  label: "Arquivo" },
-    { id: "admin",    label: "Administração" },
+    { id: "mesa",     hash: "mesa",     label: "Mesa Diretora" },
+    { id: "vereador", hash: "vereador", label: "Painel do Vereador" },
+    { id: "telao",    hash: "telao",    label: "Telão Plenário" },
+    { id: "arquivo",  hash: "arquivo",  label: "Arquivo" },
+    { id: "admin",    hash: "adm",      label: "Administração" },
   ];
   return (
     <div className="topbar">
@@ -106,11 +106,12 @@ function TopBar({ view, setView, config }) {
       </div>
       <div className="nav">
         {tabs.map(t => (
-          <button
+          <a
             key={t.id}
+            href={"#" + t.hash}
             className={view === t.id ? "active" : ""}
-            onClick={() => setView(t.id)}
-          >{t.label}</button>
+            onClick={(e) => { e.preventDefault(); setView(t.id); }}
+          >{t.label}</a>
         ))}
       </div>
       <ThemeToggle />

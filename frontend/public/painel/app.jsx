@@ -2,8 +2,31 @@
 
 function App() {
   const store = useSessionStore();
-  const [view, setView] = React.useState(() => localStorage.getItem("camara_view") || "mesa");
-  React.useEffect(() => { localStorage.setItem("camara_view", view); }, [view]);
+
+  // Hash → view (ex: #adm → "admin", #mesa → "mesa")
+  const HASH_MAP = { mesa: "mesa", vereador: "vereador", telao: "telao", arquivo: "arquivo", adm: "admin" };
+  const VIEW_TO_HASH = { mesa: "mesa", vereador: "vereador", telao: "telao", arquivo: "arquivo", admin: "adm" };
+  const VALID = Object.keys(HASH_MAP);
+
+  function hashToView(hash) {
+    const h = (hash || "").replace(/^#/, "").toLowerCase();
+    return HASH_MAP[h] || "mesa";
+  }
+
+  const [view, setViewState] = React.useState(() => hashToView(window.location.hash));
+
+  function setView(v) {
+    setViewState(v);
+    const newHash = "#" + (VIEW_TO_HASH[v] || v);
+    if (window.location.hash !== newHash) window.location.hash = newHash;
+  }
+
+  // Sincroniza botão Voltar/Avançar do browser
+  React.useEffect(() => {
+    function onHash() { setViewState(hashToView(window.location.hash)); }
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
 
   // Tweaks (apenas visuais — configuração institucional vive na admin)
   const [t, setTweak] = useTweaks(/*EDITMODE-BEGIN*/{
