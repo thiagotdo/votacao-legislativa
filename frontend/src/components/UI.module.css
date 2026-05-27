@@ -1,0 +1,53 @@
+.badge { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 20px; }
+.badgeSm { padding: 1px 6px; font-size: 10px; }
+.badgeGreen { background: var(--green-bg); color: var(--green-text); border: 1px solid rgba(63,185,80,.2); }
+.badgeRed { background: var(--red-bg); color: var(--red-text); border: 1px solid rgba(248,81,73,.2); }
+.badgeYellow { background: var(--yellow-bg); color: var(--yellow-text); border: 1px solid rgba(227,179,65,.2); }
+.badgeBlue { background: var(--blue-bg); color: var(--blue-text); border: 1px solid rgba(88,166,255,.2); }
+.badgePurple { background: var(--purple-bg); color: var(--purple-text); border: 1px solid rgba(188,140,255,.2); }
+.badgeGray { background: var(--surface3); color: var(--text2); border: 1px solid var(--border); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: .5rem 1rem; font-size: 13px; font-weight: 500; border-radius: var(--radius); border: 1px solid var(--border); background: var(--surface2); color: var(--text); transition: all .15s; white-space: nowrap; }
+.btn:hover:not(:disabled) { background: var(--surface3); border-color: var(--border2); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btnPrimary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btnPrimary:hover:not(:disabled) { opacity: .88; background: var(--accent); }
+.btnGreen { background: var(--green-bg); border-color: rgba(63,185,80,.3); color: var(--green-text); }
+.btnGreen:hover:not(:disabled) { background: #163a22; }
+.btnRed { background: var(--red-bg); border-color: rgba(248,81,73,.3); color: var(--red-text); }
+.btnRed:hover:not(:disabled) { background: #3d1616; }
+.btnYellow { background: var(--yellow-bg); border-color: rgba(227,179,65,.3); color: var(--yellow-text); }
+.btnYellow:hover:not(:disabled) { background: #3a2a10; }
+.btnSm { padding: .3rem .7rem; font-size: 12px; }
+.btnLg { padding: .65rem 1.25rem; font-size: 14px; }
+.btnFull { width: 100%; }
+
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem; }
+
+.metricCard { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; }
+.metricValue { font-size: 28px; font-weight: 600; line-height: 1.1; }
+.metricLabel { font-size: 11px; color: var(--text2); text-transform: uppercase; letter-spacing: .5px; margin-top: 4px; }
+.metricSub { font-size: 11px; color: var(--text3); margin-top: 2px; }
+
+.sectionTitle { font-size: 12px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; }
+
+.alert { border-radius: var(--radius); padding: .75rem 1rem; font-size: 13px; margin-bottom: 1rem; }
+.alertInfo { background: var(--blue-bg); border: 1px solid rgba(88,166,255,.2); color: var(--blue-text); }
+.alertWarn { background: var(--yellow-bg); border: 1px solid rgba(227,179,65,.2); color: var(--yellow-text); }
+.alertSuccess { background: var(--green-bg); border: 1px solid rgba(63,185,80,.2); color: var(--green-text); }
+.alertDanger { background: var(--red-bg); border: 1px solid rgba(248,81,73,.2); color: var(--red-text); }
+
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,.7); display: flex; align-items: center; justify-content: center; z-index: 100; backdrop-filter: blur(4px); }
+.modal { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl); width: 500px; max-width: 90vw; max-height: 85vh; overflow-y: auto; }
+.modalHeader { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border); }
+.modalHeader h2 { font-size: 15px; font-weight: 600; }
+.modalClose { background: none; border: none; color: var(--text2); font-size: 16px; cursor: pointer; padding: 4px; border-radius: 4px; }
+.modalClose:hover { background: var(--surface2); color: var(--text); }
+.modalBody { padding: 1.25rem 1.5rem; }
+.modalFooter { padding: 1rem 1.5rem; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; gap: 8px; }
+
+.formGroup { margin-bottom: 1rem; }
+.label { font-size: 12px; color: var(--text2); display: block; margin-bottom: 4px; }
+
+.spinner { width: 20px; height: 20px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .6s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }

@@ -1,0 +1,56 @@
+.sessaoList { display: flex; flex-direction: column; gap: 0; }
+.sessaoItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: .75rem 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background .15s;
+}
+.sessaoItem:last-child { border-bottom: none; }
+.sessaoItem:hover { color: var(--accent); }
+
+.sessaoHeader {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.metricsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.logList { display: flex; flex-direction: column; gap: 0; }
+.logItem {
+  display: flex;
+  gap: 12px;
+  padding: .6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.logItem:last-child { border-bottom: none; }
+.logDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border2);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.logContent { flex: 1; }
+.logDesc { font-size: 13px; }
+
+@media (max-width: 900px) {
+  .metricsRow { grid-template-columns: repeat(2, 1fr); }
+}

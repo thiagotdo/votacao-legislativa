@@ -1,0 +1,89 @@
+.sessaoItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: .75rem 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+}
+.sessaoItem:last-child { border-bottom: none; }
+.sessaoItem:hover { color: var(--accent); }
+
+.quorumCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+.quorumTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: .75rem;
+  flex-wrap: wrap;
+}
+.quorumBar {
+  height: 8px;
+  background: var(--surface3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.quorumFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width .4s ease, background .3s;
+}
+
+.verGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 8px;
+}
+.verCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .85rem .6rem .65rem;
+  text-align: center;
+  position: relative;
+  transition: all .2s;
+}
+.clicavel { cursor: pointer; }
+.clicavel:hover { border-color: var(--border2); transform: translateY(-1px); }
+
+.presente { background: #0a2414; border-color: rgba(63,185,80,.4); }
+.ausente { background: var(--surface); }
+
+.statusDot {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.dotVerde { background: var(--green-text); box-shadow: 0 0 6px rgba(63,185,80,.5); }
+.dotCinza { background: var(--border2); }
+
+.verAvatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--surface3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 auto 6px;
+  color: var(--text2);
+}
+.verNome { font-size: 12px; font-weight: 500; }
+.verPartido { font-size: 10px; color: var(--text3); margin-top: 1px; margin-bottom: 4px; }
+
+.statusLabel { font-size: 10px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; }
+.labelVerde { color: var(--green-text); }
+.labelCinza { color: var(--text3); }

@@ -1,0 +1,13 @@
+{
+  "name": "votacao-legislativa",
+  "version": "1.0.0",
+  "description": "Sistema de Votação Legislativa — Câmara Municipal",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build && mkdir -p ../backend/public && cp -r dist/* ../backend/public/",
+    "start": "node backend/src/config/migrate.js && node backend/src/server.js",
+    "db:seed": "node backend/src/config/seed.js"
+  }
+}

@@ -1,0 +1,93 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface2: #1c2333;
+  --surface3: #21262d;
+  --border: #30363d;
+  --border2: #484f58;
+  --text: #e6edf3;
+  --text2: #8b949e;
+  --text3: #656d76;
+  --green: #2ea043;
+  --green-bg: #0f2d1a;
+  --green-text: #3fb950;
+  --red: #da3633;
+  --red-bg: #2d0f0f;
+  --red-text: #f85149;
+  --yellow: #d29922;
+  --yellow-bg: #2d2011;
+  --yellow-text: #e3b341;
+  --blue: #1f6feb;
+  --blue-bg: #0d2045;
+  --blue-text: #58a6ff;
+  --purple: #8250df;
+  --purple-bg: #1e1033;
+  --purple-text: #bc8cff;
+  --accent: #f0883e;
+  --accent-bg: #2d1b08;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  font-size: 14px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font-family: inherit; }
+input, select, textarea {
+  font-family: inherit;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 13px;
+  padding: .5rem .75rem;
+  width: 100%;
+  transition: border-color .15s;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+select option { background: var(--surface2); }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+
+.mono { font-family: 'DM Mono', monospace; }
+
+/* Utilities */
+.flex { display: flex; }
+.flex-col { display: flex; flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-1 { gap: .25rem; }
+.gap-2 { gap: .5rem; }
+.gap-3 { gap: .75rem; }
+.gap-4 { gap: 1rem; }
+.mt-1 { margin-top: .25rem; }
+.mt-2 { margin-top: .5rem; }
+.mt-3 { margin-top: .75rem; }
+.mt-4 { margin-top: 1rem; }
+.mb-3 { margin-bottom: .75rem; }
+.mb-4 { margin-bottom: 1rem; }
+.text-sm { font-size: 12px; }
+.text-xs { font-size: 11px; }
+.text-muted { color: var(--text2); }
+.text-green { color: var(--green-text); }
+.text-red { color: var(--red-text); }
+.text-yellow { color: var(--yellow-text); }
+.text-blue { color: var(--blue-text); }
+.text-accent { color: var(--accent); }
+.fw-500 { font-weight: 500; }
+.w-full { width: 100%; }

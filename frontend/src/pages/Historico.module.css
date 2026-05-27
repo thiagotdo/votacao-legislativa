@@ -1,0 +1,90 @@
+.lista { display: flex; flex-direction: column; gap: 0; }
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: .8rem 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background .15s;
+}
+.item:last-child { border-bottom: none; }
+.item:hover .itemTitulo { color: var(--accent); }
+.itemMain { flex: 1; min-width: 0; }
+.itemTitulo { font-size: 13px; font-weight: 500; transition: color .15s; }
+
+.placarModal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 1.25rem;
+}
+.placarItem {
+  border-radius: var(--radius);
+  padding: .75rem;
+  text-align: center;
+  border: 1px solid;
+}
+.placarSim { background: var(--green-bg); border-color: rgba(63,185,80,.2); }
+.placarNao { background: var(--red-bg); border-color: rgba(248,81,73,.2); }
+.placarAbs { background: var(--yellow-bg); border-color: rgba(227,179,65,.2); }
+.placarNum { font-size: 28px; font-weight: 600; font-family: 'DM Mono', monospace; }
+.placarSim .placarNum { color: var(--green-text); }
+.placarNao .placarNum { color: var(--red-text); }
+.placarAbs .placarNum { color: var(--yellow-text); }
+.placarLabel { font-size: 10px; font-weight: 600; letter-spacing: 1px; opacity: .7; margin-top: 2px; }
+.placarSim .placarLabel { color: var(--green-text); }
+.placarNao .placarLabel { color: var(--red-text); }
+.placarAbs .placarLabel { color: var(--yellow-text); }
+
+.votosGrid { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.25rem; }
+.votoChip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  padding: 3px 8px 3px 10px;
+  border-radius: 20px;
+  border: 1px solid;
+}
+.voto_sim { background: var(--green-bg); color: var(--green-text); border-color: rgba(63,185,80,.2); }
+.voto_nao { background: var(--red-bg); color: var(--red-text); border-color: rgba(248,81,73,.2); }
+.voto_abstencao { background: var(--yellow-bg); color: var(--yellow-text); border-color: rgba(227,179,65,.2); }
+.votoIcon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 9px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.voto_sim .votoIcon { background: var(--green-text); color: #000; }
+.voto_nao .votoIcon { background: var(--red-text); color: #fff; }
+.voto_abstencao .votoIcon { background: var(--yellow-text); color: #000; }
+
+.ataBox {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: .75rem;
+}
+.ataHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem .75rem;
+  border-bottom: 1px solid var(--border);
+}
+.ataPre {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--text2);
+  line-height: 1.7;
+  padding: .75rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
