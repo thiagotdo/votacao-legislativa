@@ -121,13 +121,6 @@ function SecaoIdentidade({ store }) {
     { v: "ampla",    l: "Ampla",    d: "15 px — leitura confortável." },
     { v: "extra",    l: "Extra grande", d: "16 px — máxima legibilidade." },
   ];
-  const fontFamilies = [
-    { v: "moderna",       l: "Moderna",        sans: "Montserrat",    serif: "Playfair Display", d: "Montserrat + Playfair Display — moderna e expressiva." },
-    { v: "institucional", l: "Institucional",  sans: "IBM Plex Sans", serif: "IBM Plex Serif",   d: "IBM Plex Sans + IBM Plex Serif — formal e técnica." },
-    { v: "classica",      l: "Clássica",       sans: "Source Sans 3", serif: "Source Serif 4",   d: "Source Sans + Source Serif — neutra e legível." },
-    { v: "editorial",     l: "Editorial",      sans: "Manrope",       serif: "Crimson Pro",      d: "Manrope + Crimson Pro — refinada, para atas e relatórios." },
-    { v: "geist",         l: "Geist",          sans: "Geist",         serif: "Newsreader",       d: "Geist + Newsreader — contemporânea minimalista." },
-  ];
 
   return (
     <div className="admin-section">
@@ -227,21 +220,6 @@ function SecaoIdentidade({ store }) {
             </div>
           </Field>
 
-          <Field label="Família tipográfica" full
-            hint="Define os tipos sem serifa (interface) e com serifa (títulos e ata) usados em todo o sistema.">
-            <div className="admin-radio-group" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))" }}>
-              {fontFamilies.map(o => (
-                <div key={o.v} className={`admin-radio font-radio ${(c.fonteSistema || "moderna") === o.v ? "on" : ""}`}
-                  onClick={() => setCamaraField(store, "fonteSistema", o.v)}>
-                  <span className="l" style={{ fontFamily: `"${o.serif}", serif` }}>{o.l}</span>
-                  <span className="font-sample" style={{ fontFamily: `"${o.sans}", system-ui, sans-serif` }}>
-                    Aa Bb Cc 123
-                  </span>
-                  <span className="s">{o.d}</span>
-                </div>
-              ))}
-            </div>
-          </Field>
         </div>
 
         <div className="divider" />

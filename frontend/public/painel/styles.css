@@ -1,10 +1,10 @@
 /* === Sistema de Votação Legislativa — tema moderno (claro + escuro) === */
 
 :root {
-  /* Tipografia */
-  --serif: "Playfair Display", "Newsreader", "Times New Roman", serif;
-  --sans: "Montserrat", system-ui, sans-serif;
-  --mono: "Geist Mono", ui-monospace, monospace;
+  /* Tipografia — Inter + JetBrains Mono (fixos) */
+  --sans:  "Inter", system-ui, sans-serif;
+  --serif: "Inter", system-ui, sans-serif;
+  --mono:  "JetBrains Mono", ui-monospace, monospace;
 
   /* === Tema CLARO (padrão) — neutros frios === */
   --bg:        #f4f6f9;   /* fundo do app */
@@ -54,27 +54,6 @@
   color-scheme: light;
 }
 
-/* === Famílias tipográficas alternativas (escolhidas em Administração → Identidade) === */
-[data-font="moderna"] {
-  --sans:  "Montserrat", system-ui, sans-serif;
-  --serif: "Playfair Display", "Newsreader", "Times New Roman", serif;
-}
-[data-font="institucional"] {
-  --sans:  "IBM Plex Sans", system-ui, sans-serif;
-  --serif: "IBM Plex Serif", "Times New Roman", serif;
-}
-[data-font="classica"] {
-  --sans:  "Source Sans 3", system-ui, sans-serif;
-  --serif: "Source Serif 4", "Times New Roman", serif;
-}
-[data-font="editorial"] {
-  --sans:  "Manrope", system-ui, sans-serif;
-  --serif: "Crimson Pro", "Times New Roman", serif;
-}
-[data-font="geist"] {
-  --sans:  "Geist", system-ui, sans-serif;
-  --serif: "Newsreader", "Times New Roman", serif;
-}
 
 /* === Tema ESCURO === */
 [data-theme="dark"] {

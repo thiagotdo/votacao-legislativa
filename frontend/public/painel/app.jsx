@@ -22,14 +22,6 @@ function App() {
     document.documentElement.style.fontSize = size;
   }, [store.config.camara.tamanhoFonte]);
 
-  // Família tipográfica do sistema — definida na Identidade da Câmara
-  React.useEffect(() => {
-    document.documentElement.setAttribute(
-      "data-font",
-      store.config.camara.fonteSistema || "moderna"
-    );
-  }, [store.config.camara.fonteSistema]);
-
   // Auto-tick simulator
   React.useEffect(() => {
     if (!t.simulador) return;
