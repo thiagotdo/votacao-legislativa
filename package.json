@@ -6,7 +6,7 @@
     "node": ">=18"
   },
   "scripts": {
-    "build": "cd frontend && npm install && npm run build && mkdir -p ../backend/public && cp -r dist/* ../backend/public/",
+    "build": "cd frontend && npm install && npm run build && cd .. && mkdir -p backend/public && cp -r frontend/dist/* backend/public/ && cd backend && npm install",
     "start": "node backend/src/config/migrate.js && node backend/src/server.js",
     "db:seed": "node backend/src/config/seed.js"
   }
