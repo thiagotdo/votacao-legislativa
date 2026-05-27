@@ -20,4 +20,4 @@ COPY backend/ ./backend/
 
 EXPOSE 3000
 
-CMD node backend/src/config/migrate.js && node backend/src/server.js
+CMD node backend/src/config/migrate.js && node backend/src/config/seed.js && node backend/src/server.js

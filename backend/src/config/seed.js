@@ -17,6 +17,13 @@ const pool = new Pool(
 async function seed() {
   const client = await pool.connect();
   try {
+    // Verifica se já foi populado
+    const check = await client.query('SELECT COUNT(*) FROM partidos');
+    if (parseInt(check.rows[0].count) > 0) {
+      console.log('ℹ️  Banco já populado, seed ignorado.');
+      return;
+    }
+
     console.log('🌱 Populando banco de dados...');
     await client.query('BEGIN');
 
