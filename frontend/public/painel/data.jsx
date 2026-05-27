@@ -28,17 +28,17 @@ const TIPOS_DEFAULT = {
 
 const CONFIG_DEFAULT = {
   camara: {
-    municipio:        "Município de Serrinha",
+    municipio:        "Município de Biritinga",
     estado:           "BA",
-    nomeFormal:       "Câmara Municipal de Serrinha",
+    nomeFormal:       "Câmara Municipal de Biritinga",
     legislatura:      "19ª Legislatura",
     sessaoLeg:        "2ª Sessão Legislativa",
     biennio:          "2025—2028",
     enderecoLinha1:   "Praça Cel. João Neves, s/nº — Centro",
-    enderecoLinha2:   "CEP 48700-000 · Serrinha / BA",
+    enderecoLinha2:   "CEP 48620-000 · Biritinga / BA",
     cnpj:             "13.826.480/0001-30",
-    siteOficial:      "www.camaraserrinha.ba.gov.br",
-    plenarioNome:     "Plenário da Câmara Municipal de Serrinha",
+    siteOficial:      "www.camarabiritinga.ba.gov.br",
+    plenarioNome:     "Plenário da Câmara Municipal de Biritinga",
     horarioPadrao:    "14:00",
     diaSemana:        "Terça-feira",
     corInstitucional: "#2f6bd1",
@@ -50,21 +50,21 @@ const CONFIG_DEFAULT = {
     {
       id: "S-2026-010", numero: 10, tipo: "Ordinária",
       dataIso: "2026-06-03", hora: "14:00",
-      local: "Plenário da Câmara Municipal de Serrinha",
+      local: "Plenário da Câmara Municipal de Biritinga",
       pauta: "PL 012/2025 — Cria o Programa Municipal de Incentivo ao Esporte. Requerimentos de informação da Secretaria de Obras.",
       observacoes: "",
     },
     {
       id: "S-2026-011", numero: 11, tipo: "Ordinária",
       dataIso: "2026-06-10", hora: "14:00",
-      local: "Plenário da Câmara Municipal de Serrinha",
+      local: "Plenário da Câmara Municipal de Biritinga",
       pauta: "Primeiro turno da LOA 2027. Audiência pública precedente das 13h às 13h45.",
       observacoes: "Sessão precedida de audiência pública.",
     },
     {
       id: "S-2026-EXT-001", numero: 12, tipo: "Extraordinária",
       dataIso: "2026-06-17", hora: "10:00",
-      local: "Plenário da Câmara Municipal de Serrinha",
+      local: "Plenário da Câmara Municipal de Biritinga",
       pauta: "Apreciação em caráter de urgência do VETO 002/2026 ao PL nº 007/2026.",
       observacoes: "Convocação extraordinária pelo Executivo Municipal.",
     },
@@ -98,7 +98,7 @@ const SESSAO_INICIAL = {
   sessaoLeg: "2ª Sessão Legislativa",
   data: "27 de maio de 2026",
   hora: "14:00",
-  local: "Plenário da Câmara Municipal de Serrinha",
+  local: "Plenário da Câmara Municipal de Biritinga",
   status: "aberta",
   presencas: {
     v01: true, v02: true, v03: true, v04: true, v05: true,
@@ -108,9 +108,9 @@ const SESSAO_INICIAL = {
   materias: [
     {
       id: "PL 010/2025", tipo: "PL", ordem: 1,
-      titulo: "Institui o Fundo Municipal de Habitação Popular de Serrinha",
+      titulo: "Institui o Fundo Municipal de Habitação Popular de Biritinga",
       autor: "Verª. Aline Souza",
-      ementa: "Cria o Fundo Municipal de Habitação Popular para viabilizar programas habitacionais destinados à população de baixa renda no Município de Serrinha.",
+      ementa: "Cria o Fundo Municipal de Habitação Popular para viabilizar programas habitacionais destinados à população de baixa renda no Município de Biritinga.",
       status: "aprovada", votacaoAbertaEm: "14:18", votacaoFechadaEm: "14:26",
       votos: { v01: "sim", v02: "sim", v03: "sim", v04: "abst", v05: "nao", v06: "sim", v07: "sim", v09: "sim", v10: "sim", v11: "abst", v13: "sim" },
     },
@@ -160,8 +160,8 @@ const SESSOES_PASSADAS = [
 ];
 
 // === Hook unificado: sessão + configuração ===
-const SESSION_KEY = "serrinha_painel_sessao_v1";
-const CONFIG_KEY  = "serrinha_painel_config_v1";
+const SESSION_KEY = "biritinga_painel_sessao_v1";
+const CONFIG_KEY  = "biritinga_painel_config_v1";
 
 function loadJSON(key, fallback) {
   try {
